@@ -32,7 +32,7 @@ author:
     github:    https://github.com/ShinJeKim
     facebook:  https://www.facebook.com/shinjehere
     # twitter:   <hide>
-    email:     shinjehere@gmail.com
+    email:     https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=shinjehere@gmail.com
 
 # Navigation (2nd level links supported)
 nav:
@@ -44,8 +44,8 @@ nav:
     - { Tags: '/blog/tags/' }
   About:          
     - '/about/'
-  Github Project: 
-    - 'http://shinjekim.github.io/'
+  # Github Project: 
+  #  - 'http://shinjekim.github.io/'
 
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
