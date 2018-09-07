@@ -1,6 +1,6 @@
 ---
 layout: post
-title: [javascript] 기본 내용 정리-(1)
+title: "[javascript] 기본 내용 정리-(1)"
 date: 2018-09-07
 categories: javascript
 tags: javascript 자바스크립트
