@@ -1,12 +1,12 @@
 ---
 layout: post
-date: 2018-09-07
 title: [javascript] 기본 내용 정리-(1)
+date: 2018-09-07
 categories: javascript
 tags: javascript 자바스크립트
 ---
 
-##### object 객체 속성 접근 방법
+### object 객체 속성 접근 방법
 var human = {age: 20, nationality: korea}
 1. 객체이름.속성이름
     => human.age = 20
@@ -14,12 +14,12 @@ var human = {age: 20, nationality: korea}
 2. 객체이름["속성이름"]
 	=> human["age"] = 20
 
-##### Math 관련 명령어
+### Math 관련 명령어
 - Math.pow(A, b): A의 b승을 구함
 - Math.sqrt(A): A의 제곱근을 구함
 - Math.random(): 0~1 사이의 임의의 난수 발생
 
-##### 문자열 다루기
+### 문자열 다루기
 1. 문자열 길이 알아내기
 => string.length
 
