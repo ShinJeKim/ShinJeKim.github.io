@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[javascript] 프로그래머스|Level1|수박수박수박수박수박수?"
-date: 2018-09-08
+date: 2018-09-09
 categories: algorithm
 tags: javascript 자바스크립트 알고리즘
 ---
