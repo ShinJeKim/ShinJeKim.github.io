@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "[javascript] 프로그래머스|Level1|평균 구하기"
-date: 2018-09-10
+date: 2018-09-1
 categories: algorithm
 tags: javascript 자바스크립트 알고리즘
 ---
