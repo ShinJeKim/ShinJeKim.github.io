@@ -36,11 +36,12 @@ author:
 
 # Navigation (2nd level links supported)
 nav:
-  Home:           
-    - '/blog/categories/'
+  # Home:           
+  #  - '/'
   Blog:           
     - '/blog/'
-    - { Categories: '/blog/categories/' }
+    # - { Categories: '/blog/categories/' }
+    - { Categories: '/' }
     - { Tags: '/blog/tags/' }
   About:          
     - '/about/'
@@ -49,7 +50,8 @@ nav:
 
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
-category_page: '/blog/categories/'
+# category_page: '/blog/categories/'
+category_page: '/'
 
 hero:
   # image: /public/img/we_will_be_giants_by_yalestewart.jpg
