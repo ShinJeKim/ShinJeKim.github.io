@@ -3,7 +3,7 @@ title: ShinJe Kim
 tagline: 'devlog of ShinJe Kim'
 description: 'devlog of ShinJe Kim'
 baseurl: ""
-url: http://shinjekim.github.io/blog/categories
+url: http://shinjekim.github.io
 logo: ''
 
 # Site configurations
@@ -36,8 +36,8 @@ author:
 
 # Navigation (2nd level links supported)
 nav:
-  #Home:           
-  #  - '/'
+  Home:           
+    - '/'
   Blog:           
     - '/blog/'
     - { Categories: '/blog/categories/' }
