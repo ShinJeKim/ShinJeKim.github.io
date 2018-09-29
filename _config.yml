@@ -37,10 +37,10 @@ author:
 # Navigation (2nd level links supported)
 nav:
   Home:           
-    - '/'
+    - '/home'
   Blog:           
     - '/blog/'
-    - { Categories: '/blog/categories/' }
+    - { Categories: '/' }
     - { Tags: '/blog/tags/' }
   About:          
     - '/about/'
