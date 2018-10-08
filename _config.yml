@@ -42,8 +42,8 @@ nav:
     - '/blog/'
     - { Categories: '/blog/categories/' }
     - { Tags: '/blog/tags/' }
-  About:          
-    - '/about/'
+  Resume:          
+    - '/resume/'
   # Github Project: 
   #  - 'http://shinjekim.github.io/'
 
