@@ -29,10 +29,9 @@ author:
   # gravatar: 3c2986ad7ac1f2230ea3596f44563328 # md5 hash of your email address
   contact:
     # linkedin:  https://www.linkedin.com/in/lizhihao
-    github:    https://github.com/ShinJeKim
-    facebook:  https://www.facebook.com/shinjehere
+    github: https://github.com/shinjekim
     # twitter:   <hide>
-    email:     https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=shinjehere@gmail.com
+    email: mailto:shinjehere@gmail.com
 
 # Navigation (2nd level links supported)
 nav:
@@ -58,5 +57,9 @@ hero:
 # Puglins
 mathjax: true # whether support mathjax
 google_analytics_token: 'UA-00000000-1' # leave blank if you don't want google analytics
-disqus_short_name: 'ShinJe Kim' # leave blank if you don't want disqus
+disqus_short_name: 'shinjekim' # leave blank if you don't want disqus
+
+# Use the following plug-ins
+gems:
+  - jekyll-paginate
 
