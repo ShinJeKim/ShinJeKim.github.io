@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[TIL] 2019-08-07 (수)"
+title: "[Android] ConstraintLayout 톺아보기"
 date: 2019-08-07
 categories: Android
 tags: ConstraintLayout

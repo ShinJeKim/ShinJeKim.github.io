@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[TIL] 2019-08-07 (수)"
+title: "[Android] DeepLink(딥링크) 알아보기"
 date: 2019-08-07
 categories: Android
 tags: DeepLink
