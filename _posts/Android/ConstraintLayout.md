@@ -1,3 +1,10 @@
+---
+layout: post
+title: "[TIL] 2019-08-07 (수)"
+date: 2019-08-07
+categories: Android
+tags: ConstraintLayout
+---
 # **ConstraintLayout**
 
 > 제약 레이아웃은 android.view.ViewGroup에 속한 레이아웃이며 위젯의 위치(position)와 크기(size)를 지정할 수 있게 해줍니다.
