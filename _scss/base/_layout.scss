@@ -21,7 +21,11 @@
 .container {
   max-width: 28rem;
   a {
-    @if $theme-color != $default { color: $theme-color; }
+    // @if $theme-color != $default { color: $theme-color; }
+    color: #4c6ef5;
+    text-decoration: none;
+    font-weight: 500;
+    line-height: 1.7;
   }
 }
 @media (min-width: 38em) {
