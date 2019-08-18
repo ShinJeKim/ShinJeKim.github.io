@@ -38,7 +38,7 @@ https://developer.android.com/kotlin/style-guide
 ### 1. Traditional deep links
 초기의 딥링크에서는 앱이 설치되어 있으면 딥링크를 통해 해당 컨텐츠로 정상적으로 이동할 수 있었습니다. 하지만 앱이 설치되어있지 않은 경우에는 에러 페이지나 대체 페이지를 보여줘야만 했습니다. 
 
-![traditional-deep-link.png](../../resources/images/traditional-deep-link.png)
+![traditional-deep-link.png](~/resources/images/traditional-deep-link.png)
 
 이러한 문제를 해결하기 위해 나온 것이 아래의 deferred deep links입니다. 
 
@@ -47,7 +47,7 @@ deferred(지연된) 딥링크는 앱을 다운받지 않은 사용자에게도 �
 
 만약 앱이 설치되지 않은 경우라면 구글 플레이스토어나 앱스토어로 리다이렉트하여 이동한 뒤, 앱 다운로드가 완료되면 바로 해당 컨텐츠로 이동할 수 있도록 합니다. 위에서 언급했던 초기의 딥링크의 문제점을 개선한 것이라고 볼 수 있습니다. 
 
-![deferred-deep-links.png](../../resources/images/deferred-deep-links.png)
+![deferred-deep-links.png](~/resources/images/deferred-deep-links.png)
 
 <!-- deferred deep links의 문제점 추가!!!!!-->
 
@@ -60,7 +60,7 @@ deferred(지연된) 딥링크는 앱을 다운받지 않은 사용자에게도 �
 
 예를 들어 아래의 그림1은 사용자가 지도 링크를 클릭한 후 지도앱 또는 크롬에서 링크를 열 것인지 묻는 disambiguation dialog를 보여줍니다. 
 
-![그림1](../../resources/images/disambiguation-dialog.png)
+![그림1](~/resources/images/disambiguation-dialog.png)
 
 [그림1. The disambiguation dialog](https://developer.android.com/training/app-links/images/app-disambiguation_2x.png)
 

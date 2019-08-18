@@ -26,7 +26,7 @@ tags: ConstraintLayout
 ## Relative positioning
 Relative positioning(상대 위치 지정)은 제약 레이아웃에서 가장 기초적인 개념입니다. 대상 위젯의 위치를 지정할 때, 다른 위젯으로부터의 상대적인 위치에 지정하는 것입니다. 예를 들면 아래 그림처럼 버튼B라는 위젯의 위치를 지정하기 위해서 버튼A의 오른쪽으로 버튼B를 포지셔닝 할 수 있습니다.
 
-![relative-positioning-example](../../resources/images/relative-positioning-example.png)
+![relative-positioning-example](~/resources/images/relative-positioning-example.png)
 
 위의 레이아웃의 코드는 아래와 같습니다. 다른 부분은 나중에 차차 살펴보고 일단 `app:layout_constraint...`라고 되어있는 부분만 살펴보도록 하겠습니다. `app:layout_constraint...`라고 되어 있는 부분을 보면 모두 `app:layout_constraint... = "parent"` 혹은 `app:layout_constraint... = "@+id/아이디"`로 parent 혹은 id가 할당되어 있는 것을 보실 수 있습니다. 이처럼 Relative positioning을 하기 위해서는 기준으로 잡을 수 있는 parent나 다른 위젯의 id가 항상 필요합니다. 
 
@@ -135,7 +135,7 @@ ConstraintLayout의 장점은 불가능해보이는 제약을 지정했을 때 �
 ```
 위의 코드같은 경우에는 버튼의 너비가 상위 레이아웃인 ConstraintLayout의 너비와 일치해야만 가능합니다. 이럴 때 안드로이드에서는 아래와 같이 대상 위젯을 parent의 정중앙에 위치시킵니다. 이는 수평/수직 제약 모두 해당됩니다. 
 
-![centerint-positioning.png](../../resources/images/centering-positioning-example.png)
+![centerint-positioning.png](~/resources/images/centering-positioning-example.png)
 
 #### Bias
 대상 위젯의 양 측으로 제약을 줄 때 기본적으로는 정중앙에 위치하도록 포지셔닝됩니다. 이를 변경하고 싶다면 bias 속성을 사용하여 다르게 포지셔닝을 할 수 있습니다. bias를 사용하면 스크린의 크기 변경에 유연하게 대응할 수 있습니다. 
@@ -144,7 +144,7 @@ ConstraintLayout의 장점은 불가능해보이는 제약을 지정했을 때 �
 - layout_constraintVertical_bias
 ```
 
-![bias-example.png](../../resources/images/bias-example.png)
+![bias-example.png](~/resources/images/bias-example.png)
 
 예를 들어 위의 그림처럼 왼쪽으로 치우치게 포지셔닝을 하고 싶다면 layout_constraintHorizontal_bias를 0.5이하로 설정하면 됩니다. 저는 아래 코드와 같이 0.2로 설정해보았습니다. 
 ```xml
@@ -161,7 +161,7 @@ Circular Positioning(원형 위치 지정)이란 대상 위젯의 중간점으�
 ```
 아래의 왼쪽과 같이 버튼B의 제약을 지정하면, 오른쪽의 그림과 같은 결과가 나옵니다. 
 
-![circular-positioning](../../resources/images/circular-positioning.png)
+![circular-positioning](~/resources/images/circular-positioning.png)
 
 코드로 자세히 보겠습니다. 버튼A의 id인 buttonA를 constraintCircle로 지정하였습니다. 각도는 60도로 하였고, 버튼A의 중점으로부터 100dp만큼의 거리에 버튼B의 중점이 위치하도록 하였습니다. 
 ```xml
@@ -182,7 +182,7 @@ View.GONE에 속한 GONE 위젯은 뷰에서 보여지지 않으며 자리를 �
 
 예를 들어 보겠습니다. 아래 왼쪽의 그림에서 버튼B는 버튼A의 end를 기준으로 80dp의 마진을 두고 있습니다. 그리고 버튼A는 parent의 start를 기준으로 70dp의 마진을 두고 있습니다. 여기서 버튼A의 visibility를 gone으로 처리하면 버튼A의 면적과 마진이 모두 0으로 간주됩니다. 따라서 오른쪽 그림처럼 버튼A는 보이지 않게 되고 버튼B만 보이게 되며, 버튼 A가 없어진 면적만큼 버튼B의 위치가 이동한 것을 보실 수 있습니다.  
 
-![gone.png](../../resources/images/bias-example.png)
+![gone.png](~/resources/images/bias-example.png)
 
 이 때의 코드는 아래와 같습니다. 코드를 살펴보면, 버튼B에 걸려있는 버튼A에 대한 제약과 속성은 그대로 남아있는 것을 확인할 수 있습니다. 그리고 버튼A에 지정된 제약과 속성 또한 그대로 유지되어있습니다. 하지만 버튼A의 `visibility`를 `gone`으로 지정했기때문에 레이아웃에서 버튼A가 차지하는 면적과 마진은 0으로 간주되고, 그래서 위의 그림과 같은 뷰를 만들 수 있게 되는 것입니다. 
 ```xml
@@ -247,7 +247,7 @@ View.GONE에 속한 GONE 위젯은 뷰에서 보여지지 않으며 자리를 �
 ```
 아래의 예시를 한 번 보겠습니다. TextView의 width를 wrap_content로 지정해놓았습니다. 그런데 TextView의 content 길이가 너무 길어 TextView의 width가 길어졌고, 그로 인해 화면에서 Button이 보이지 않습니다. 이 때 TextView에 `app:layout_constrainedWidth=”true”` 속성을 추가하면 width에 제한을 주면 위젯 안의 content 길이가 길어지더라도 위와 같이 레이아웃이 유지됩니다. 
 
-![constraint-width.png](../../resources/images/constraint-width.png) 
+![constraint-width.png](~/resources/images/constraint-width.png) 
 
 #### MATCH_CONSTRAINT dimensions
 위젯의 크기를 MATCH_CONSTRAINT로 설정하면 기본적으로 해당 위젯이 차지할 수 있는 모든 면적을 다 차지하게 됩니다. 이 때 아래의 속성을 사용하여 위젯의 크기를 변경할 수 있습니다. 
@@ -306,7 +306,7 @@ width와 height이 모두 MATCH_CONSTRAINT(0dp)로 지정되어 있을 때에도
 
 우선 width와 height를 모두 0dp로 지정하였습니다. 마지막 라인의 `app:layout_constraintDimensionRatio="W, 1:3"`의 의미는 height를 먼저 constraint에 맞춰 3으로 설정한 후, width를 1로 설정하겠다는 것입니다. 위의 코드를 입력하면 아래와 같은 결과가 나옵니다. (코드에서는 생략했지만 start/end, top/bottom 제약을 모두 parent로 설정하였습니다.)
 
-![dimenstion-ratio-width](../../resources/images/dimenstion-ratio-width.png)
+![dimenstion-ratio-width](~/resources/images/dimenstion-ratio-width.png)
 
 그럼 아래와 같이 `H, 1:3`으로 지정하면 어떻게 될까요?
 ```xml
@@ -318,7 +318,7 @@ width와 height이 모두 MATCH_CONSTRAINT(0dp)로 지정되어 있을 때에도
 
 마지막 라인의 `app:layout_constraintDimensionRatio="H, 1:3"` 부분에 의해 width가 먼저 parent에 맞춰 1로 설정이 되고, 그 다음 height가 그에 대한 3의 비율로 설정됩니다. 따라서 아래 그림과 같이 위젯이 화면을 벗어나게됩니다. 
 
-![dimenstion-ratio-height](../../resources/images/dimenstion-ratio-height.png)
+![dimenstion-ratio-height](~/resources/images/dimenstion-ratio-height.png)
 
 ## Chains
 체인을 사용하면 하나의 수평/수직 축(axis)을 기준으로 여러개의 위젯들을 그룹화하여 움직일 수 있습니다. 하나의 축을 기준으로 체인을 지정하더라도 다른 축에 대한 제약은 독립적으로 적용할 수 있습니다. 즉, 수평 체인을 지정하더라도 수직으로 별개의 제약을 지정할 수 있습니다. 
@@ -326,12 +326,12 @@ width와 height이 모두 MATCH_CONSTRAINT(0dp)로 지정되어 있을 때에도
 #### Creating a chain
 아래와 같이 위젯들이 양방향으로 연결되어있는 것을 가장 기본적인 형태의 체인으로 볼 수 있습니다. 
 
-![chain](../../resources/images/horizontal-chain.png)
+![chain](~/resources/images/horizontal-chain.png)
 
 #### Chain heads
 체인은 가장 첫 번째에 있는 요소인 헤드(head)의 속성에 의해 제어됩니다. 수평 체인에서는 가장 왼쪽에 있는 위젯이 헤드가 되고, 수직 체인에서는 가장 위쪽에 있는 위젯이 헤드가 됩니다. 
 
-![chain](../../resources/images/chain-head.png)
+![chain](~/resources/images/chain-head.png)
 
 #### Margins in chains
 체인 연결에 마진을 지정할수도 있습니다. `spread chain`의 경우 할당된 공간에서 마진의 크기만큼 여백이 줄어듭니다. 아래에서 자세히 설명해보겠습니다. 
@@ -366,7 +366,7 @@ width와 height이 모두 MATCH_CONSTRAINT(0dp)로 지정되어 있을 때에도
 #### Barrier
 `배리어(Barrier)`는 복수의 위젯을 참조하여 가상의 장벽(일종의 가이드라인)을 만듭니다. 배리어 제약이 지정된 위젯들은 위치가 변경될 때 배리어에 맞게 변경됩니다. 이 때 배리어와 가장 가까이 있는 위젯(공식문서에서는 "the most extreme widget on the specified side"라고 표현하고 있습니다.)을 기준으로 장벽을 만듭니다. 아래의 그림 1번을 보시면 ButtonA가 배리어와 가장 가까이 있을 때에는 ButtonA를 기준으로 배리어가 형성됩니다. 하지만 2번 그림처럼 ButtonB가 배리어 방향의 가장 극단으로 옮겨지면 ButtonB를 기준으로 배리어가 형성됩니다.
 
-![barrier.png](../../resources/images/barrier.png)
+![barrier.png](~/resources/images/barrier.png)
 
 #### Group
 `그룹(Group)` 헬퍼를 통해 복수의 위젯을 그룹화하여 아래와 같이 visibility 속성(visible | invisible | gone)을 동시에 제어할 수 있습니다.
