@@ -2,8 +2,8 @@
 layout: post
 title: "[javascript] 프로그래머스|Level1|서울에서 김서방 찾기"
 date: 2018-09-12
-categories: algorithm
-tags: javascript 자바스크립트 알고리즘
+categories: Algorithms
+tags: JavaScript
 ---
 **문제 설명**
 String형 배열 seoul의 element중 "Kim"의 위치 x를 찾아, 김서방은 x에 있다는 String을 반환하는 함수, solution을 완성하세요. seoul에 "Kim"은 오직 한 번만 나타나며 잘못된 값이 입력되는 경우는 없습니다.

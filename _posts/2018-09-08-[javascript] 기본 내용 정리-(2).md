@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[javascript] 기본 내용 정리-(2)"
+title: "[JavaScript] 기본 내용 정리-(2)"
 date: 2018-09-08
-categories: javascript
-tags: javascript 자바스크립트
+categories: JavaScript
+tags: JavaScript 
 ---
 
 ### 배열

@@ -2,8 +2,8 @@
 layout: post
 title: "[javascript] 프로그래머스|Level1|핸드폰 번호 가리기"
 date: 2018-09-27
-categories: algorithm
-tags: javascript 자바스크립트 알고리즘
+categories: Algorithms
+tags: JavaScript
 ---
 **문제 설명**
 프로그래머스 모바일은 개인정보 보호를 위해 고지서를 보낼 때 고객들의 전화번호의 일부를 가립니다.

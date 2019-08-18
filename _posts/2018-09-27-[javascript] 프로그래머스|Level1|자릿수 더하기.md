@@ -2,8 +2,8 @@
 layout: post
 title: "[javascript] 프로그래머스|Level1|자릿수 더하기"
 date: 2018-09-27
-categories: algorithm
-tags: javascript 자바스크립트 알고리즘
+categories: Algorithms
+tags: JavaScript
 ---
 **문제 설명**
 자연수 N이 주어지면, N의 각 자릿수의 합을 구해서 return 하는 solution 함수를 만들어 주세요.

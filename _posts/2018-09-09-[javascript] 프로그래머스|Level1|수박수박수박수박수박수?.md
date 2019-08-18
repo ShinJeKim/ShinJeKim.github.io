@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[javascript] 프로그래머스|Level1|수박수박수박수박수박수?"
+title: "[JavaScript] 프로그래머스|Level1|수박수박수박수박수박수?"
 date: 2018-09-09
-categories: algorithm
-tags: javascript 자바스크립트 알고리즘
+categories: Algorithms
+tags: JavaScript
 ---
 **문제 설명**
 길이가 n이고, 수박수박수박수....와 같은 패턴을 유지하는 문자열을 리턴하는 함수, solution을 완성하세요. 

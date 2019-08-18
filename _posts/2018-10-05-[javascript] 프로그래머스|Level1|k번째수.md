@@ -2,8 +2,8 @@
 layout: post
 title: "[javascript] 프로그래머스|Level1|k번째수"
 date: 2018-10-05
-categories: algorithm
-tags: javascript 자바스크립트 알고리즘
+categories: Algorithms
+tags: JavaScript
 ---
 
 **문제 설명**

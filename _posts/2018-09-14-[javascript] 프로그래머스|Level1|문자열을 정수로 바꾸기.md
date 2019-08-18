@@ -2,8 +2,8 @@
 layout: post
 title: "[javascript] 프로그래머스|Level1|문자열을 정수로 바꾸기"
 date: 2018-09-14
-categories: algorithm
-tags: javascript 자바스크립트 알고리즘
+categories: Algorithms
+tags: JavaScript
 ---
 **문제 설명**
 문자열 s를 숫자로 변환한 결과를 반환하는 함수, solution을 완성하세요.

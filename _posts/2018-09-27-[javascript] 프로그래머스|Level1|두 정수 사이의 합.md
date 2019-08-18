@@ -2,8 +2,8 @@
 layout: post
 title: "[javascript] 프로그래머스|Level1|두 정수 사이의 합"
 date: 2018-09-27
-categories: algorithm
-tags: javascript 자바스크립트 알고리즘
+categories: Algorithms
+tags: JavaScript
 ---
 **문제 설명**
 두 정수 a, b가 주어졌을 때 a와 b 사이에 속한 모든 정수의 합을 리턴하는 함수, solution을 완성하세요.

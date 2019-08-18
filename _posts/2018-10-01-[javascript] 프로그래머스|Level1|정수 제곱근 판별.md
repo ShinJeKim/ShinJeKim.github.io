@@ -2,8 +2,8 @@
 layout: post
 title: "[javascript] 프로그래머스|Level1|정수 제곱근 판별"
 date: 2018-10-01
-categories: algorithm
-tags: javascript 자바스크립트 알고리즘
+categories: Algorithms
+tags: JavaScript
 ---
 **문제 설명**
 임의의 정수 n에 대해, n이 어떤 정수 x의 제곱인지 아닌지 판단하려 합니다.

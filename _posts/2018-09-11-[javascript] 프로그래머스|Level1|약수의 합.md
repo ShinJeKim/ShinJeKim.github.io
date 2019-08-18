@@ -2,8 +2,8 @@
 layout: post
 title: "[javascript] 프로그래머스|Level1|약수의 합"
 date: 2018-09-11
-categories: algorithm
-tags: javascript 자바스크립트 알고리즘
+categories: Algorithms
+tags: JavaScript
 ---
 **문제 설명**
 자연수 n을 입력받아 n의 약수를 모두 더한 값을 리턴하는 함수, solution을 완성해주세요.

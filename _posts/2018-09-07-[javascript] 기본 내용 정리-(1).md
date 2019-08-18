@@ -1,9 +1,9 @@
 ---
 layout: post
-title: "[javascript] 기본 내용 정리-(1)"
+title: "[JavaScript] 기본 내용 정리-(1)"
 date: 2018-09-07
-categories: javascript
-tags: javascript 자바스크립트
+categories: JavaScript
+tags: JavaScript
 ---
 
 ### object 객체 속성 접근 방법
