@@ -9,7 +9,7 @@ body {
 }
 
 html {
-  font-family: $font-serif;
+  font-family: $font-sans;
   text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -20,11 +20,11 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-sans;
-  font-weight: 400;
+  font-weight: 700;
   color: $title-color;
   letter-spacing: -.025rem;
 }
 
 code {
-  color: #666;
+  color: #845ef7;
 }

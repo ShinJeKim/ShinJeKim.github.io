@@ -37,7 +37,7 @@ author:
 nav:
   Home:           
     - '/blog/'
-  Categories:           
+  Categories:
     - '/'
     - { TIL: '/blog/categories/#til' }
     - { Android: '/blog/categories/#Android' }
