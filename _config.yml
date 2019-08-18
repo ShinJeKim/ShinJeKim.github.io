@@ -1,9 +1,9 @@
 # Site Info
-title: ShinJe Kim
+title: Challengist
 tagline: 'devlog of ShinJe Kim'
 description: 'devlog of ShinJe Kim'
 baseurl: ""
-url: http://shinjekim.github.io
+url: https://shinjekim.github.io
 logo: ''
 
 # Site configurations
@@ -36,13 +36,17 @@ author:
 # Navigation (2nd level links supported)
 nav:
   Home:           
-    - '/'
-  Blog:           
     - '/blog/'
-    - { Categories: '/blog/categories/' }
-    - { Tags: '/blog/tags/' }
-  Resume:          
-    - '/resume/'
+  Blog:           
+    - '/'
+    - { TIL: '/blog/categories/#til' }
+    - { Android: '/blog/categories/#Android' }
+    - { Kotlin: '/blog/categories/#Kotlin' }
+    - { Algorithms: '/blog/categories/#Algorithms' }
+    - { Refactoring: '/blog/categories/#Refactoring' }
+    - { Algorithms: '/blog/categories/#Algorithms' }
+  # Resume:          
+  #   - '/resume/'
   # Github Project: 
   #  - 'http://shinjekim.github.io/'
 
