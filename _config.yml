@@ -38,13 +38,12 @@ nav:
   Home:           
     - '/blog/'
   Categories:
-    - '/'
+    - '/blog/categories/'
     - { TIL: '/blog/categories/#til' }
-    - { Android: '/blog/categories/#Android' }
-    - { Kotlin: '/blog/categories/#Kotlin' }
-    - { Algorithms: '/blog/categories/#Algorithms' }
-    - { Refactoring: '/blog/categories/#Refactoring' }
-    - { Algorithms: '/blog/categories/#Algorithms' }
+    - { Android: '/blog/categories/#android' }
+    - { Kotlin: '/blog/categories/#kotlin' }
+    - { Algorithms: '/blog/categories/#algorithms' }
+    - { Refactoring: '/blog/categories/#refactoring' }
   # Resume:          
   #   - '/resume/'
   # Github Project: 
