@@ -4,6 +4,7 @@ title: "[JavaScript] 기본 내용 정리-(2)"
 date: 2018-09-08
 categories: JavaScript
 tags: JavaScript 
+comments: true
 ---
 
 ### 배열

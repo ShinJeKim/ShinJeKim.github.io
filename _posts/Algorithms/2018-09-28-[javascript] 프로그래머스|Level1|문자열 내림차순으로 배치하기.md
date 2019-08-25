@@ -4,6 +4,7 @@ title: "[javascript] 프로그래머스|Level1|문자열 내림차순으로 배�
 date: 2018-09-28
 categories: Algorithms
 tags: JavaScript
+comments: true
 ---
 **문제 설명**
 문자열 s에 나타나는 문자를 큰것부터 작은 순으로 정렬해 새로운 문자열을 리턴하는 함수, solution을 완성해주세요.

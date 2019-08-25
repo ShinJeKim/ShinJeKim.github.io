@@ -4,6 +4,7 @@ title: "[javascript] 프로그래머스|Level1|평균 구하기"
 date: 2018-09-1
 categories: Algorithms
 tags: JavaScript
+comments: true
 ---
 **문제 설명**
 정수를 담고 있는 배열 arr의 평균값을 return하는 함수, solution을 완성해보세요.
