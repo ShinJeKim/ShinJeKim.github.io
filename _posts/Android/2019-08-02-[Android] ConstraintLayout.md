@@ -4,6 +4,7 @@ title: "[Android] ConstraintLayout 톺아보기 (안드로이드 공식 문서 �
 date: 2019-08-07
 categories: Android
 tags: ConstraintLayout
+comments: true
 ---
 # **ConstraintLayout**
 
