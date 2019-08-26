@@ -183,7 +183,7 @@ View.GONE에 속한 GONE 위젯은 뷰에서 보여지지 않으며 자리를 �
 
 예를 들어 보겠습니다. 아래 왼쪽의 그림에서 버튼B는 버튼A의 end를 기준으로 80dp의 마진을 두고 있습니다. 그리고 버튼A는 parent의 start를 기준으로 70dp의 마진을 두고 있습니다. 여기서 버튼A의 visibility를 gone으로 처리하면 버튼A의 면적과 마진이 모두 0으로 간주됩니다. 따라서 오른쪽 그림처럼 버튼A는 보이지 않게 되고 버튼B만 보이게 되며, 버튼 A가 없어진 면적만큼 버튼B의 위치가 이동한 것을 보실 수 있습니다.  
 
-![gone.png](/resources/images/bias-example.png)
+![gone.png](/resources/images/gone.png)
 
 이 때의 코드는 아래와 같습니다. 코드를 살펴보면, 버튼B에 걸려있는 버튼A에 대한 제약과 속성은 그대로 남아있는 것을 확인할 수 있습니다. 그리고 버튼A에 지정된 제약과 속성 또한 그대로 유지되어있습니다. 하지만 버튼A의 `visibility`를 `gone`으로 지정했기때문에 레이아웃에서 버튼A가 차지하는 면적과 마진은 0으로 간주되고, 그래서 위의 그림과 같은 뷰를 만들 수 있게 되는 것입니다. 
 ```xml
@@ -209,7 +209,7 @@ View.GONE에 속한 GONE 위젯은 뷰에서 보여지지 않으며 자리를 �
 이러한 GONE 제약은 일시적으로 위젯을 사라지게 하고싶지만 레이아웃은 그대로 유지해야 할 때 유용하게 사용할 수 있습니다. 
 그런데 여기서 하나의 문제가 발생합니다. 버튼A를 GONE 위젯으로 만들어버리면 버튼B의 위치가 달라집니다. 버튼B의 위치도 그대로 유지하고싶다면 어떻게 해야 할까요? 이 떄 사용하는 것이 [위에서 언급한](#margins-when-connected-to-a-GONE-widget) `gone margin`입니다. 
 
-## Dimensions constraints
+## Dimension constraints
 아래는 dimension과 관련된 제약들입니다. dimension은 치수/면적/크기 등으로 번역될 수 있는데, 문맥에 맞게 혼용하여 사용하도록 하겠습니다. 
 
 #### Minimum dimensions on ConstraintLayout
@@ -351,7 +351,7 @@ width와 height이 모두 MATCH_CONSTRAINT(0dp)로 지정되어 있을 때에도
 #### Margins and chains
 체인에서 마진은 합산되는 성질이 있습니다. 예를 들어, 수평 체인에서 한 요소의 오른쪽 마진을 10dp로 설정하고, 그 다음 요소의 왼쪽 마진을 5dp로 설정하면 두 요소간의 마진은 총 15dp가 됩니다. 체인의 요소들을 포지셔닝하기 위해 남은 공간을 계산할 때, 요소와 그 요소의 마진이 차지하는 공간을 합산하여 하나로 간주합니다. 
 
-## Virtual Helper objects
+## Virtual Helpers objects
 앞서 설명했던 내장 함수 이외에도 ConstraintLayout에 포함된 helper를 이용하여 레이아웃을 조정할 수 있습니다. `Guideline` 객체를 사용하면 ConstraintLayout을 기준으로 하는 수평/수직의 가이드라인을 만들 수 있으며, `Barrier`와 `Group` 속성도 사용할 수 있습니다. 가이드라인(Guideline)과 배리어(Barrier)는 렌더링되어 뷰에 나타나는 요소는 아닙니다.(View.GONE의 gone 뷰로 표시됩니다) 주로 가이드라인에 위젯을 붙여 위젯의 위치를 쉽게 변경하기 위해 사용합니다. 
 
 #### Guideline
