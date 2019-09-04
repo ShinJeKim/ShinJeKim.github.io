@@ -158,3 +158,7 @@ class FacebookUser(val accountId: Int) : User {
 여기서 2번 SubsribingUser와 3번 FacebookUser를 구현하는 방법의 차이에 주의해야합니다. SubscribingUser의 nickname 프로퍼티는 매번 호출될때마다 substringBefore를 호출하여 계산하는 커스텀 게터를 활용합니다. 이와 다르게 FacebookUser의 nickname 프로퍼티는 객체를 초기화할 때 계산한 데이터를 뒷받침하는 필드(backing fields)에 저장했다가 불러오는 방식을 활용합니다. 
 
 인터페이스에는 추상 프로퍼티뿐만 아니라 getter와 setter가 있는 프로퍼티를 선언할 수도 있습니다. 이 떄의 getter와 setter는 backing field를 참조할 수 없습니다. 왜냐하면 backing field가 있다면 인터페이스에 상태를 추가하는 셈인데, 인터페이스는 상태를 저장할 수 없기 때문입니다. 인터페이스에 선언된 프로퍼티와는 달리, 클래스에 구현된 프로퍼티는 backing field를 원하는 대로 사용할 수 있습니다. 
+
+### 참고 문헌
+[코틀린 공식문서](https://kotlinlang.org/docs/reference)
+[코틀린 인 액션](http://acornpub.co.kr/book/kotlin-in-action)

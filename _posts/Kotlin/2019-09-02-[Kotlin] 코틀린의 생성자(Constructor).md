@@ -103,3 +103,6 @@ class MyButton : View {
 
 클래스에 주 생성자가 없다면 부 생성자는 반드시 상위 클래스를 초기화하거나 다른 생성자에게 생성을 위임해야 합니다. 부 생성자가 필요한 이유는 자바와의 상호 운용성과 팩토리 메소드에서 필요하기 때문입니다. 
 
+### 참고 문헌
+[코틀린 공식문서](https://kotlinlang.org/docs/reference)
+[코틀린 인 액션](http://acornpub.co.kr/book/kotlin-in-action)

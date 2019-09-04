@@ -50,3 +50,7 @@ val demo = Outer().Inner().foo() // == 1
 - [open/final/abstract 클래스](#open/final/abstract-클래스)
 - [public/internal/protected/private 가시성 접근자](#public/internal/protected/private-가시성-접근자)
 - [봉인된(sealed) 클래스](#봉인된(sealed)-클래스) -->
+
+### 참고 문헌
+[코틀린 공식문서](https://kotlinlang.org/docs/reference)
+[코틀린 인 액션](http://acornpub.co.kr/book/kotlin-in-action)
