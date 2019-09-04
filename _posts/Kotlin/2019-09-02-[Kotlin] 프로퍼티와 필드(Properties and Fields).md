@@ -160,5 +160,5 @@ class FacebookUser(val accountId: Int) : User {
 인터페이스에는 추상 프로퍼티뿐만 아니라 getter와 setter가 있는 프로퍼티를 선언할 수도 있습니다. 이 떄의 getter와 setter는 backing field를 참조할 수 없습니다. 왜냐하면 backing field가 있다면 인터페이스에 상태를 추가하는 셈인데, 인터페이스는 상태를 저장할 수 없기 때문입니다. 인터페이스에 선언된 프로퍼티와는 달리, 클래스에 구현된 프로퍼티는 backing field를 원하는 대로 사용할 수 있습니다. 
 
 ### 참고 문헌
-[코틀린 공식문서](https://kotlinlang.org/docs/reference)
-[코틀린 인 액션](http://acornpub.co.kr/book/kotlin-in-action)
+- [코틀린 공식문서](https://kotlinlang.org/docs/reference)
+- [코틀린 인 액션](http://acornpub.co.kr/book/kotlin-in-action)
