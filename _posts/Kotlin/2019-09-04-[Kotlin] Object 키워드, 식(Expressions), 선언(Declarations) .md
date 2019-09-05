@@ -127,7 +127,7 @@ object DefaultListener : MouseAdapter() {
 **주의**: 객체 선언은 지역적으로 수행될 수 없으며(함수 내에 중첩될 수는 있습니다), 다른 객체 선언이나 내부 클래스가 아닌 곳에 중첩될 수 있습니다. 
 
 ## Companion Objects(동반 객체)
-클래스 내부의 객체 선언은 아래와 같이 `companion` 키워드로 표현할 수 있습니다.
+자바에서 static은 객체를 생성하지 않아도 전체적으로 사용할 수 있게 하는 것을 의미합니다. 코틀린에서는 static이 없는 대신 companion 객체를 만들면 인터페이스로 만들거나 상속받도록 할 수 있다. 클래스 내부의 객체 선언은 아래와 같이 `companion` 키워드로 표현할 수 있습니다.
 
 ```kotlin
 class MyClass {
@@ -196,3 +196,6 @@ val f: Factory<MyClass> = MyClass
 ### 참고 문헌
 - [코틀린 공식문서](https://kotlinlang.org/docs/reference)
 - [코틀린 인 액션](http://acornpub.co.kr/book/kotlin-in-action)
+
+
+
