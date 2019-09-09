@@ -94,7 +94,7 @@ fun reformat(str: String,
 reformat(str)
 ```
 
-하지만 디폴트 인자가 없는 매개변수를 호출할떄에는 아래와 같이 호출해야합니다.
+하지만 디폴트 인자가 없는 매개변수를 호출할때에는 아래와 같이 호출해야합니다.
 
 ```kotlin
 reformat(str, true, true, false, '_')
@@ -117,7 +117,7 @@ reformat(str,
 reforamt(str, wordSeparator = '_')
 ```
 
-순서대로 전달되는 인자(positional arguments)와 지명 인자(named arguments)를 둘 다 사용하여 함수를 호출할 떄, 모든 positional arguments는 가장 첫번째 지명 인자보다 앞에 위치해야만 합니다. 예를 들어 `f(1, y =2)`는 가능하지만, `f(x = 1, 2)`는 사용할 수 없습니다. 
+순서대로 전달되는 인자(positional arguments)와 지명 인자(named arguments)를 둘 다 사용하여 함수를 호출할 때, 모든 positional arguments는 가장 첫번째 지명 인자보다 앞에 위치해야만 합니다. 예를 들어 `f(1, y =2)`는 가능하지만, `f(x = 1, 2)`는 사용할 수 없습니다. 
 
 가변 길이 인자를 사용하는 함수-호출 시 인자 개수가 달리질 수 있는 함수-(variable number of arguments: vararg)는 아래와 같이 `spread(*)` 연산자를 사용하여 전달합니다.
 ```kotlin
@@ -126,7 +126,7 @@ fun foo(vararg strings: String) { /*...*/ }
 foo(strings = *arrayOf("a", "b", "c"))
 ```
 
-> On the JVM: 지명 인자 문법은 자바 함수를 호출할 떄에는 사용할 수 없습니다. 자바의 바이트코드가 항상 매개변수의 이름을 보관하는 것은 아니기 때문입니다.
+> On the JVM: 지명 인자 문법은 자바 함수를 호출할 때에는 사용할 수 없습니다. 자바의 바이트코드가 항상 매개변수의 이름을 보관하는 것은 아니기 때문입니다.
 
 ### Unit을 반환하는 함수(Unit-returning functions)
 리턴값이 없는 함수의 리턴 타입은 `Unit`입니다. `Unit`은 오직 하나의 값을 가지는 함수이며, 그 값 또한 `Unit`입니다. 이 값은 명시적으로 작성할 필요는 없습니다.
@@ -154,7 +154,7 @@ fun double(x: Int): Int = x * 2
 
 만약 컴파일러가 함수의 리턴 타입을 유추할 수 있다면 아래와 같이 리턴 타입을 생략해도 됩니다.
 ```kotlin
-fnu double(x: Int) = x * 2
+fun double(x: Int) = x * 2
 ```
 
 ### 명시적 리턴 타입(Explicit return types)
@@ -215,7 +215,7 @@ infix fun Int.shl(x: Int): Int { ... }
 > 
 > 이외의 전체 연산자 우선 순위 계층 구조는 [Grammar reference](https://kotlinlang.org/docs/reference/grammar.html#expressions)에서 볼 수 있습니다.
 
-중위 함수 호출을 사용하기 위해서는 항상 수신자(receiver)와 매개 변수를 지정해야만 합니다. 중위 함수 호출 표기법을 사용하여 현재의 수신자에서 메소드를 호출할 때에는 `this`를 명시적으로 사용해야만 합니다. 명확한 구문 분석을 위해서입니다. 이 떄 `this`는 일반적으로 메소드를 호출할때처럼 생략할 수 없습니다.
+중위 함수 호출을 사용하기 위해서는 항상 수신자(receiver)와 매개 변수를 지정해야만 합니다. 중위 함수 호출 표기법을 사용하여 현재의 수신자에서 메소드를 호출할 때에는 `this`를 명시적으로 사용해야만 합니다. 명확한 구문 분석을 위해서입니다. 이 때 `this`는 일반적으로 메소드를 호출할때처럼 생략할 수 없습니다.
 
 ```kotlin
 class MyStringCollection {
@@ -306,7 +306,7 @@ tailrec fun findFixPoint(x: Double = 1.0): Double
     = if (Math.abs(x = Math.cos(x)) < eps) x else findFixPoint(Math.cos(x))
 ```
 
-이 코드는 수학적인 상수인 코사인(cosine)의 고정점(fixpoint)을 계산합니다. 결과가 더 이상 변하지 않을때까지 1.0부터 반복적으로 Math.cos 함수를 호출하여 지정된 `eps` 정밀도와 비교하여 0.7390851332151611라는 결괄르 도출합니다. 
+이 코드는 수학적인 상수인 코사인(cosine)의 고정점(fixpoint)을 계산합니다. 결과가 더 이상 변하지 않을때까지 1.0부터 반복적으로 Math.cos 함수를 호출하여 지정된 `eps` 정밀도와 비교하여 0.7390851332151611라는 결과를 도출합니다. 
 
 ```kotlin
 val eps = 1E-10 // "good enough", could be 10^-15
