@@ -136,7 +136,7 @@ fun foo(node: Node): String? {
 }
 ```
 
-### !! 연산자(The !! Operator)
+## !! 연산자(The !! Operator)
 세번쨰 방법은 NPE 애호가를 위한 것입니다: not-null을 선언하는 연산지인 `!!`는 모든 값을 null이 아닌 타입으로 변환하고, 값이 null인 경우에는 예외를 throw합니다. 예를 들면, `b!!`와 같이 쓸 수 있으며 이것은 null이 아닌 `b`값(예, `String`)을 리턴하거나 `b`가 null인 경우 NPE를 throw합니다:
 
 ```kotlin
