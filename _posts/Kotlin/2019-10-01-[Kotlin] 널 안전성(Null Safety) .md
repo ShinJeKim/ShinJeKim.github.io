@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Kotlin] 2019-10-01"
+title: "[Kotlin] 코틀린의 널 안전성(Null Safety)"
 date: 2019-10-01
 categories: Kotlin
 tags: Kotlin
