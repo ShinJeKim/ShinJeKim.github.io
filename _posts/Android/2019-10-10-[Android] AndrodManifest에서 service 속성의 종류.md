@@ -39,7 +39,7 @@ comments: true
 ### **description:**
 서비스([`Service`](https://developer.android.com/reference/android/app/Service.html))를 애플리케이션의 컴포넌트로 선언하는 부분입니다. 액티비티와는 달리 서비스는 보여지는 유저 인터페이스가 없습니다. 주로 오래 지속되는 백그라운드 오퍼레이션이나 다른 애플리케이션으로부터 호출되는 많은 통신 API(rich communications API)를 구현하는데에 사용됩니다. 
 
-모든 서비스는 매너페스트 파일의 `<service>`에서 선언되어야만 합니다. 이 곳에 선언되지 안은 서비스는 시스템에서 보여지지 않으며 절대 실행되지 않습니다.
+모든 서비스는 매너페스트 파일의 `<service>`에서 선언되어야만 합니다. 이 곳에 선언되지 않은 서비스는 시스템에서 보여지지 않으며 절대 실행되지 않습니다.
 
 ### **attributes:**
 - `android:description`
