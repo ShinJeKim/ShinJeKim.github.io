@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Android] AndrodManifest에서 \<service> 속성의 종류"
+title: "[Android] AndrodManifest에서 service 속성의 종류"
 date: 2019-10-10
 categories: Android
 tags: Android
