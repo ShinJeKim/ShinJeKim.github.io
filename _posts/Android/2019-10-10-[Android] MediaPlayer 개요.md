@@ -20,10 +20,13 @@ comments: true
 ## 매너페스트 선언하기(Manifest declarations)
 애플리케이션에서 MediaPlayer를 사용하기 위해서는 매너페스트 파일에 적절한 선언을 해주어야 합니다.
 - **Internet Permission** - 스트림 네트워크 기반의 MediaPlayer를 사용한다면 애플리케이션이 네트워크 접근을 요청해야만 합니다.
+  
 ```xml
 <uses-permission android:name="android.permission.INTERNET" />
 ```
+
 - **Wake Lock Permission** - 플레이어 구동시 앱 화면이 꺼지지 않게 방지하거나 프로세서가 잠들지 않게 할 때, 혹은 [`MediaPlayer.setScreenOnWhilePlaying()`](https://developer.android.com/reference/android/media/MediaPlayer.html#setScreenOnWhilePlaying(boolean)) 이나 [`MediaPlayer.setWakeMode()`](https://developer.android.com/reference/android/media/MediaPlayer.html#setWakeMode(android.content.Context,%20int))를 사용할떄에는 이 권한의 허용을 요청해야만 합니다.
+
 ```xml
 <uses-permission android:name="android.permission.WAKE_LOCK" />
 ```
