@@ -27,7 +27,7 @@ comments: true
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
-- **Wake Lock Permission** - 플레이어 구동시 앱 화면이 꺼지지 않게 방지하거나 프로세서가 잠들지 않게 할 때, 혹은 [`MediaPlayer.setScreenOnWhilePlaying()`](https://developer.android.com/reference/android/media/MediaPlayer.html#setScreenOnWhilePlaying(boolean)) 이나 [`MediaPlayer.setWakeMode()`](https://developer.android.com/reference/android/media/MediaPlayer.html#setWakeMode(android.content.Context,%20int))를 사용할떄에는 이 권한의 허용을 요청해야만 합니다.
+- **Wake Lock Permission** - 플레이어 구동시 앱 화면이 꺼지지 않게 방지하거나 프로세서가 잠들지 않게 할 때, 혹은 [`MediaPlayer.setScreenOnWhilePlaying()`](https://developer.android.com/reference/android/media/MediaPlayer.html#setScreenOnWhilePlaying(boolean)) 이나 [`MediaPlayer.setWakeMode()`](https://developer.android.com/reference/android/media/MediaPlayer.html#setWakeMode(android.content.Context,%20int))를 사용할때에는 이 권한의 허용을 요청해야만 합니다.
 
 ```xml
 <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -76,7 +76,7 @@ val mediaPlayer: MediaPlayer? = MediaPlayer().apply {
 
 > **중요:** 온라인상의 미디어 파일을 스트림하기 위한 URL을 전달한다면, 해당 파일은 [progressive download](https://ko.wikipedia.org/wiki/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%A0%88%EC%8B%9C%EB%B8%8C_%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C)가 가능한 파일이어야만 합니다.
 
-> ***주의***: `setDataSource()`를 사용할떄에는 `IllegalArgumentException`과 `IOException`을 catch하거나 pass하도록 해야합니다. 참조하고있는 해당 파일이 존재하지 않을 수도 있기 때문입니다.
+> ***주의***: `setDataSource()`를 사용할때에는 `IllegalArgumentException`과 `IOException`을 catch하거나 pass하도록 해야합니다. 참조하고있는 해당 파일이 존재하지 않을 수도 있기 때문입니다.
 
 ### 비동기 준비(Asynchronous preparation)
 [`MediaPlayer`](https://developer.android.com/reference/android/media/MediaPlayer.html)를 사용할 때에 주의해야할 점이 몇 가지 있습니다. 예를 들면, [`prepare()`](https://developer.android.com/reference/android/media/MediaPlayer.html#prepare()) 호출은 미디어 데이터를 가져오고 디코딩하는 과정을 포함할 수 있기때문에 실행하는 데에 시간이 많이 걸릴 수 있습니다. 따라서 이와 같이 실행하는데에 시간이 많이 걸릴 수 있는 메서드는 ***절대 애플리케이션의 UI 스레드에서 호출하면 안됩니다.*** 만약 UI 스레드에서 시간이 오래 걸리는 메서드를 호출한다면, 해당 메서드가 리턴될때까지 UI가 멈춰있게되며 이는 매우 나쁜 사용자 경험을 제공합니다. 또한 이는 ANR(Application Not Responding) 에러를 발생시킬 수도 있습니다. 만약 당신의 리소스가 빨리 다운로드 될 것이라고 기대할지라도, UI 응답이 1/10초 이상 걸리는 것은 일시적으로 정지된다는 것을 감지할 수 있는 정도이며 이는 사용자에게 앱이 느리다는 인상을 줄 수 있습니다.
@@ -93,7 +93,7 @@ val mediaPlayer: MediaPlayer? = MediaPlayer().apply {
 ## 서비스에서 MediaPlayer 사용하기(Using MediaPlayer in a service)
 애플리케이션이 스크린에서 보이지 않을때에도 백그라운드에서 앱이 동작하도록 만들고 싶다는 것은, 사용자가 다른 애플리케이션과 상호작용 할 때에도 당신의 애플리케이션의 미디어가 재생되게 하고 싶다는 것입니다. 그렇게 하기 위해서는 우선 Service를 시작한 다음 여기에서 [`MediaPlayer`](https://developer.android.com/reference/android/media/MediaPlayer.html) 인스턴스를 제어해야만 합니다. MediaPlayer를 [`MediaBrowserServiceCompat`](https://developer.android.com/reference/androidx/media/MediaBrowserServiceCompat.html)에 임베드하여 다른 액티비티의 [`MediaBrowserCompat`](https://developer.android.com/reference/android/support/v4/media/MediaBrowserCompat.html)과 상호작용 하도록 해야합니다.
 
-이 떄 클라이언트/서버 설정에 주의해야합니다. 백그라운드 서비스에서 실해중인 플레이어가 시스템의 다른 부분과 어떻게 상호작용 하는지에 대한 기대(expectations)가 있습니다. 만약 당신의 애플리케이션이 이러한 기대를 충족하지 못한다면 사용자에게 좋지 않은 경험을 줄 수 있습니다. 자세한 내용은 [Building an Audio App](https://developer.android.com/guide/topics/media-apps/audio-app/building-an-audio-app.html)을 참조하시면 됩니다.
+이 때 클라이언트/서버 설정에 주의해야합니다. 백그라운드 서비스에서 실해중인 플레이어가 시스템의 다른 부분과 어떻게 상호작용 하는지에 대한 기대(expectations)가 있습니다. 만약 당신의 애플리케이션이 이러한 기대를 충족하지 못한다면 사용자에게 좋지 않은 경험을 줄 수 있습니다. 자세한 내용은 [Building an Audio App](https://developer.android.com/guide/topics/media-apps/audio-app/building-an-audio-app.html)을 참조하시면 됩니다.
 
 이 섹션에서는 서비스 내부에서 MediaPlayer를 구현할 때 이를 관리하기 위한 지침에 대해 다룹니다. 
 
@@ -170,7 +170,7 @@ mediaPlayer = MediaPlayer().apply {
 }
 ```
 
-하지만, 위의 예제를 통해 얻어진 wake lock은 CPU가 꺠어있도록 하는 것만을 보장합니다. 만약 네트워크를 통해 미디어를 스트리밍하고 와이파이를 사용한다면, [`WifiLock`](https://developer.android.com/reference/android/net/wifi/WifiManager.WifiLock.html)을 유지하고 싶을 것입니다. 이 또한 직접 구현해야합니다. 따라서 원격 URL(remote URL)을 사용하여 `MediaPlayer`을 준비할떄에는 와이파이 잠금을 create하고 acquire 해야합니다. 아래는 예제 코드입니다.
+하지만, 위의 예제를 통해 얻어진 wake lock은 CPU가 꺠어있도록 하는 것만을 보장합니다. 만약 네트워크를 통해 미디어를 스트리밍하고 와이파이를 사용한다면, [`WifiLock`](https://developer.android.com/reference/android/net/wifi/WifiManager.WifiLock.html)을 유지하고 싶을 것입니다. 이 또한 직접 구현해야합니다. 따라서 원격 URL(remote URL)을 사용하여 `MediaPlayer`을 준비할때에는 와이파이 잠금을 create하고 acquire 해야합니다. 아래는 예제 코드입니다.
 
 ```kotlin
 val wifiManager = getSystemService(Context.WIFI_SERVICE) as WifiManager
@@ -202,10 +202,11 @@ class MyService : Service() {
 }
 ```
 
-서비스를 종료할 떄에 `MediaPlayer`를 release하는 것 이외에도 항상 release를 할 수 있는 기회를 찾아야합니다. 예를 들자면, 미디어를 일정 시간 동안 재생할 수 없다고 기대되는 경우(예: 오디오 포커스를 잃은 경우)에는 현재 존재하는 `MediaPlayer`를 release하고 나중에 다시 새로 create해야 합니다. 반면, 만약 아주 짧은 시간동안만 재생을 중단할 것 같은 경우에는 다시 새로 create하고 prepare하는 오버헤드를 방지하기 위해 `MediaPlayer`를 계속 유지해야 합니다.
+서비스를 종료할 때에 `MediaPlayer`를 release하는 것 이외에도 항상 release를 할 수 있는 기회를 찾아야합니다. 예를 들자면, 미디어를 일정 시간 동안 재생할 수 없다고 기대되는 경우(예: 오디오 포커스를 잃은 경우)에는 현재 존재하는 `MediaPlayer`를 release하고 나중에 다시 새로 create해야 합니다. 반면, 만약 아주 짧은 시간동안만 재생을 중단할 것 같은 경우에는 다시 새로 create하고 prepare하는 오버헤드를 방지하기 위해 `MediaPlayer`를 계속 유지해야 합니다.
 
 
-<DRM 부분 생략. 추후 추가>
+## Digital Rights Management (DRM)
+이 부분은 추후에 추가하도록 하겠습니다.
 
 ## 암호화된 미디어 처리하기(Handling encrypted media)
 안드로이드 8.0(API 레벨 26) 부터 `MediaPlayer`는 Common Encryption Scheme(CENC)와 HLS sample-level encrypted media(METHOD=SAMPLE-AES)를 기본 스트림 유형 H.264와 AAC로 decrypt할 수 있게 되었습니다. Full-segment encrypted media(METHOD=AES-128)는 이전에도 지원되었습니다.
