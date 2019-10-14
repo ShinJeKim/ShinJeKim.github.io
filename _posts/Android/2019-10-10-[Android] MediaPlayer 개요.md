@@ -9,6 +9,13 @@ comments: true
 
 *이 글은 [안드로이드 공식문서](https://developer.android.com/guide/topics/media/mediaplayer)를 공부하며 번역한 글입니다.*
 
+MediaPlayer 클래스는 오디오 및 비디오 파일과 스트림 재생을 위해 쓰입니다. MediaPlayer 클래스의 메소드를 쓰는 방법은 [`VideoView`](https://developer.android.com/reference/android/widget/VideoView.html)에서 볼 수 있습니다.
+
+## 상태 다이어그램(State Diagram)
+오디오 및 비디오 파일 스트림 재생은 상태 머신(state machine)으로 관리됩니다. 아래의 다이어그램은 지원되는 재생 제어 작업(palyback control operations)으로 구동되는 수명주기(lifecycle)및 MediaPlayer 객체의 상태를 보여줍니다. 타원은 MediaPlayer 객체가 상주할 수 있는 상태를 나타냅니다. 아크(arc)는 객체의 상태 전환을 구동하는 재생 제어 작업을 나타냅니다. 아크(arc)에는 두 가지 유형이 있습니다. 단일 화살촉(single arrow head)을 가진 아크(arc)는 동기 함수 호출을 나타내고, 이중 화살촉(double arrow head)이 있는 아크(arc)는 비동기식 함수 호출을 나타냅니다.
+
+![mediaplayer-state-diagram](/resources/images/mediaplayer_state_diagram.gif)
+
 ## The basics
 안드로이드 프레임워크에서 소리와 영상을 재생하기 위해 사용되는 클래스는 아래와 같습니다.
 - [`MediaPlayer`](https://developer.android.com/reference/android/media/MediaPlayer.html)
@@ -258,4 +265,5 @@ mediaPlayer = MediaPlayer().apply {
 
 
 ### 참고문헌
-[안드로이드 공식문서](https://developer.android.com/guide/topics/media/mediaplayer)
+- [안드로이드 공식문서 - MediaPlayer](https://developer.android.com/reference/android/media/MediaPlayer)
+- [안드로이드 공식문서 - MediaPlayer 개요](https://developer.android.com/guide/topics/media/mediaplayer)
