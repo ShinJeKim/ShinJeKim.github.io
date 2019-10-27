@@ -42,9 +42,9 @@ nav:
     - { Algorithms: '/blog/categories/#algorithms' }
     - { Android: '/blog/categories/#android' }
     - { Kotlin: '/blog/categories/#kotlin' }
-    - { Refactoring: '/blog/categories/#refactoring' }
     - { TIL: '/blog/categories/#til' }
-
+    - { etc: '/blog/categories/#etc' }
+    
   # Resume:          
   #   - '/resume/'
   # Github Project: 
