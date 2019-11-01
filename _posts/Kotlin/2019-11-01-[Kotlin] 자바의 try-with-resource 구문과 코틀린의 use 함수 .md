@@ -37,9 +37,10 @@ static readFirstLine(String path) throws IOException{
 
 코드가 더 짧고 명확해졌습니다. [이펙티브 자바의 아이템 9](#참고-자료)에서는 꼭 회수해야 하는 자원을 다룰 때에는 try-finally말고, try-with-resources를 사용하도록 해야 한다고 권합니다.
 
-그렇다면 자바의 try-with-resources를 코틀린에서는 어떻게 사용할까? 
-코틀린에서는 이를 언어 구성 요소로 제공하지는 않는다. 대신 자바의 try-with-resources와 같은 기능을 제공하는 use라는 함수를 제공한다.
-위의 try-with-resource는 코틀린의 use를 사용하여 작성하면 아래와 같다.
+## 코틀린의 use 함수
+그렇다면 자바의 try-with-resources를 코틀린에서는 어떻게 사용할까요? 
+코틀린에서는 이를 언어 구성 요소로 제공하지는 않습니다. 대신 자바의 try-with-resources와 같은 기능을 제공하는 use라는 함수를 제공합니다.
+위의 try-with-resource는 코틀린의 use를 사용하여 작성하면 아래와 같습니다.
 
 ```kotlin
 fun readFirstLine(path: String): String {
@@ -49,7 +50,7 @@ fun readFirstLine(path: String): String {
 }
 ```
 
-이 때 주의할점은 람다의 본문 안에서 사용한 return은 비지역 반환이다. 따라서 이 return문은 람다가 아니라 readFirstLine 함수를 끝내면서 값을 반환한다. 
+이 때 주의할점은 람다의 본문 안에서 사용한 return은 비지역 반환이라는 것입니다. 따라서 이 return문은 람다가 아니라 readFirstLine 함수를 끝내면서 값을 반환하게 됩니다. 
 
 ### 참고 자료
 - [이펙티브 자바 - 아이템 9. try-finally보다는 try-with-resources를 사용하라](https://blog.insightbook.co.kr/2018/10/24/%EC%9D%B4%ED%8E%99%ED%8B%B0%EB%B8%8C-%EC%9E%90%EB%B0%94-3%ED%8C%90effective-java-3-e/)
