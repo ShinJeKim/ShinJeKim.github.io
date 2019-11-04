@@ -31,7 +31,21 @@ comments: true
 
 그 어떤 `컨텍스트(Context)`보다 오래 유지되는 `컨텍스트(Context)`가 필요할때에만 `getApplicationContext()`를 사용하십시오.
 
-(이후 내용 추후 추가 예정)
+## 액티비티 컨텍스트(Activity Context)
+액티비티 컨텍스트는 액티비티에서 사용 가능하며 이 컨텍스트는 액티비티의 라이프사이클과 연결되어 있습니다. 액티비티의 범위 내에서 컨텍스트를 전달하거나, 라이프사이클이 현재의 컨텍스트에 붙은 컨텍스트가 필요할 때(need the context whose lifecycle is attached to the current context) 액티비티 컨텍스트를 사용합니다.
+
+예시: 라이프사이클이 액티비티에 붙은 객체를 생성해야 할 때 액티비티 컨텍스트를 사용할 수 있습니다. 
+
+### ContentProvider에서의 getContext() 
+이 컨텍스트는 애플리케이션 컨텍스트이며 애플리케이션 컨텍스트와 비슷하게 쓰일 수 있습니다. 이는 `getContext()` 메소드로 접근할 수 있습니다. 
+
+### 언제 `getApplicationContext()`를 쓰지 말아야 할까?
+- `액티비티(Activity)`가 하는 일 모두를 `컨텍스트(Context)`가 완전히 지원하는 것은 아닙니다. `컨텍스트(Context)`를 사용하여 작업하려고 하는 많은 것들이 안될 것이며 특히 GUI와 관련된 것은 실패할 것입니다.
+- `getApplicationContext()`의 `컨텍스트(Context)`가 정리되지 않은 호출로 생성된 무언가를 유지하고 있으면 메모리 누수가 발생할 수 있습니다. `액티비티(Activity)`를 사용하여 무언가를 가지고 있을떄, `액티비티(Activity)`가 가비기 콜렉터에 의해 수집되면 다른 모든 것들도 같이 flush됩니다. `애플리케이션(Application)` 객체는 프로세스 수명 동안 유지됩니다.
+
+## [엄지 손가락의 법칙(The Rule Of Thumb)](https://www.google.com/search?q=The+Rule+of+Thumb%EB%9E%80&oq=The+Rule+of+Thumb%EB%9E%80&aqs=chrome..69i57j0l4j69i60.4749j0j1&sourceid=chrome&ie=UTF-8)
+
+대부분의 경우 현재 작업중인 것을 둘러싸는 컴포넌트에서 직접 사용할 수 있는 `컨텍스트(Context)`를 사용하세요. 참조가 해당 컴포넌트의 라이프사이클을 넘어서지 않는 이상 참조를 안전하게 유지할 수 있습니다. 액티비티나 서비스 이외의 객체에서 `컨텍스트(Context)`에 대한 참조를 저장해야 하는 즉시 해당 참조를 애플리케이션 컨텍스트로 전환하세요. 
 
 ### 참고 자료
 - [MindOrks - Understanding Context In Android Application](https://blog.mindorks.com/understanding-context-in-android-application-330913e32514)
