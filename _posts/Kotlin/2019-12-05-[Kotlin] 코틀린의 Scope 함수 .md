@@ -14,7 +14,7 @@ comments: true
 
 아래는 전형적인 scope function의 사용법입니다:
 ```kotlin
-Person("Alice", 20, "Amsterdam").let {
+Person("Alice", 20, "Amsterdam").let {f
     println(it)
     it.moveTo("London")
     it.incrementAge()
@@ -350,3 +350,6 @@ fun displaySubstringPosition(input: String, sub: String) {
 displaySubstringPosition("010000011", "11")
 displaySubstringPosition("010000011", "12")
 ```
+
+### 출처
+[코틀린 공식문서 - Scope Functions](https://kotlinlang.org/docs/reference/scope-functions.html)
