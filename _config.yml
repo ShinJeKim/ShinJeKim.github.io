@@ -41,6 +41,7 @@ nav:
     - '/blog/categories/'
     - { Algorithms: '/blog/categories/#algorithms' }
     - { Android: '/blog/categories/#android' }
+    - { Java: '/blog/categories/#java' }
     - { Kotlin: '/blog/categories/#kotlin' }
     - { TIL: '/blog/categories/#til' }
     - { etc: '/blog/categories/#etc' }
