@@ -8,7 +8,6 @@ comments: true
 ---
 
 ## 오버드로(Overdraw)란? 
----
 단일 프레임에 동일한 픽셀을 두 번이상 그리는 작업을 의미한다. UI 카드는 [페인터의 알고리즘(뒤에서 앞으로)](https://ko.wikipedia.org/wiki/%ED%99%94%EA%B0%80_%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)으로 그려지기에 사용자에게 보여지지 않는 부분까지 그려진다. 오버드로가 발생하면 GPU 시간을 낭비하여 성능 문제로 나타난다. 
 
 > [공식 문서](https://developer.android.com/topic/performance/rendering/overdraw?hl=ko#understanding)에 따르면 OS가 최적화되었기 때문에 오버드로는 2015년 google I/O에서 논의되었던 것처럼 크게 중요한 문제가 아니라고 한다. 
