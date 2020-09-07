@@ -14,7 +14,7 @@ comments: true
 
 ### 오버드로가 있는지 어떻게 확인할 수 있을까?
 - [**GPU 오버드로 디버그 도구**](https://developer.android.com/topic/performance/rendering/overdraw?hl=ko#dgot) : 각 픽셀이 그려지는 횟수를 색상으로 구분하여 표시해주는데, 파랑>초록>분홍>빨강 순으로 오버드로가 많다는 뜻이다. 기기의 개발자 옵션에서 'GPU 오버드로 디버그' 도구를 사용할 수 있다. 
-![오버드로 예시](../../resources/images/gpu-overdraw-after_2x.png)
+![오버드로 예시](https://github.com/shinjekim/shinjekim.github.io/blob/master/resources/images/gpu-overdraw-after_2x.png?raw=true)
 
 - [**프로파일 GPU 렌더링 도구**](https://developer.android.com/topic/performance/rendering/inspect-gpu-rendering?hl=ko#profile_rendering) : 프레임당 16ms의 벤치마크(연산성능 수치를 객관적으로 표시하는 것을 의미함)를 기준으로 UI창의 프레임을 렌더링하는 데 걸리는 시간을 히스토그램으로 표시해주는 도구이다. 기기의 개발자 옵션에서 '프로필 GPU 렌더링(프로필 HWUI 렌더링)' 도구를 사용할 수 있다. GPU가 픽셀을 그리느라 성능이 저하되거나 오버로드가 심한 경우를 파악할 수 있다. 자세한 분석 방법은 공식문서의 [GPU 렌더링 프로파일로 분석](https://developer.android.com/topic/performance/rendering/profile-gpu?hl=ko) 섹션에서 확인할 수 있다.
 
